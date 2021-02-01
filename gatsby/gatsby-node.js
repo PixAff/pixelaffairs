@@ -1,4 +1,4 @@
-import path from "path";
+const path = require("path");
 
 async function turnWorkIntoPages({ graphql, actions }) {
   const workTemplate = path.resolve("./src/templates/Work.js");
@@ -27,6 +27,8 @@ async function turnWorkIntoPages({ graphql, actions }) {
   });
 }
 
-export async function createPages(params) {
+async function createPages(params) {
   await turnWorkIntoPages(params);
 }
+
+module.exports.createPages = createPages;
