@@ -1,8 +1,15 @@
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-dotenv.config({ path: ".env" });
+// dotenv.config({ path: ".env" });
 
-export default {
+require("dotenv").config({
+  path: ".env",
+});
+
+module.exports = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
     title: "Pixel Affairs",
     siteUrl: "https://pixelaffairs.com",
@@ -10,12 +17,13 @@ export default {
       "pixel affairs - Stefan Sarow, Pixera, Watchout Operator Berlin, Full Stack Web Development",
   },
   plugins: [
+    "gatsby-plugin-scroll-reveal",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-sanity",
       options: {
-        projectId: "3a0aknih",
+        projectId: process.env.SANITY_PROJECT_ID,
         dataset: "production",
         watchMode: true,
         token: process.env.SANITY_TOKEN,

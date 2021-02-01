@@ -9,7 +9,14 @@ export default function WorkPage({ data }) {
   return (
     <div>
       <SEO title="Referenzen" />
-      <WorkList works={works} />
+      <WorkList
+        className="Stefan here"
+        works={works}
+        data-sal="slide-up"
+        // data-sal-duration="2000" // changes duration of the animation (from 200to 2000 ms)
+        // data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
+        // data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
+      />
     </div>
   );
 }

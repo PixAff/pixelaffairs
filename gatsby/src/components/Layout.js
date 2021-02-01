@@ -11,14 +11,14 @@ import Footer from "./footer";
 const ContentStyles = styled.div``;
 
 export default function Layout(props) {
-  function handleScroll(e) {
-    if (window.scrollY > 100) {
-      document.body.classList.add("scrolled-nav");
-    } else {
-      document.body.classList.remove("scrolled-nav");
-    }
-  }
-  window.addEventListener("scroll", handleScroll);
+  // function handleScroll(e) {
+  //   if (window.scrollY > 100) {
+  //     document.body.classList.add("scrolled-nav");
+  //   } else {
+  //     document.body.classList.remove("scrolled-nav");
+  //   }
+  // }
+  // window.addEventListener("scroll", handleScroll);
 
   return (
     <div>
