@@ -35,7 +35,10 @@ const WorkStyles = styled.div`
   padding: 1rem;
   background: white;
   display: grid;
-  grid-template-rows: auto auto 200px minmax(12rem, 1fr) auto;
+  grid-template-rows: auto auto auto minmax(12rem, 1fr) auto;
+  .gatsby-image-wrapper {
+    height: 240px;
+  }
   gap: 1rem;
   h2,
   p {
@@ -44,6 +47,20 @@ const WorkStyles = styled.div`
   .no-padding {
     padding: 0;
     margin: 0;
+  }
+    }
+  h4 {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: intrinsic;
+    width: max-content;
+    text-align: center;
+    font-size: 2rem;
+    transform: translate(0, -40px) rotate(0deg);
+    position: relative;
+    color: black;
+    background: var(--yellow);
+    z-index: 2;
   }
 `;
 
@@ -61,11 +78,14 @@ function SingleWork({ work }) {
         <p className="subtitle">
           {date.month} {date.year}
         </p>
-        <Img
-          className="no-padding"
-          fluid={work.image.asset.fluid}
-          alt={work.title}
-        />
+        <div>
+          <Img
+            className="no-padding"
+            fluid={work.image.asset.fluid}
+            alt={work.title}
+          />
+          <h4>{work.place}</h4>
+        </div>
         <p>{truncateString(work.description)}</p>
         <Link to={`/work/${work.slug.current}`}>read more</Link>
       </WorkStyles>
