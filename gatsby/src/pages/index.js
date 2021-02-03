@@ -36,7 +36,7 @@ export default function HomePage({ data }) {
       <PageStyles>
         <IndexStyles
           style={{
-            background: "url('/index-bg-car.jpeg')",
+            background: "url('/index-bg-car.webp')",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
