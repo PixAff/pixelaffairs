@@ -35,7 +35,11 @@ export default function HomePage({ data }) {
       <SEO title="home" />
       <PageStyles>
         <IndexStyles
-          style={{ background: "url('/index-bg-car.jpeg')" }}
+          style={{
+            background: "url('/index-bg-car.jpeg')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
         ></IndexStyles>
         <AnimatedLogo />
         <Introduction fluid={data.idx.imageIdx.asset.fluid} />
