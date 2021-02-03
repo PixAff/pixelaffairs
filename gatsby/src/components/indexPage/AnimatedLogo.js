@@ -17,6 +17,7 @@ export default function AnimatedLogo() {
         autoPlay
         loop
         muted
+        poster="./pixelaffairs-logoanim-kl.gif"
         src={pixAffLogoAnimation}
         type="video/webm"
       ></video>
