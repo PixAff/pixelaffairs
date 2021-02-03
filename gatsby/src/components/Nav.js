@@ -65,6 +65,14 @@ const NavStyles = styled.nav`
   @media (max-width: 600px) {
     --columns: 4;
   }
+  @media (max-width: 400px) {
+    ul {
+      grid-gap: 2rem;
+    }
+
+    --columns: 2;
+    --nav: 140px;
+  }
 `;
 
 export default function Nav() {
