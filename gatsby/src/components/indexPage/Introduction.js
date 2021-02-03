@@ -34,7 +34,7 @@ export default function Introduction({ fluid }) {
         <div className="divider"></div>
         <div>
           <p>
-            <strong>pixel affairs</strong> ist Live Event Spezialist für
+            <strong>pixel affairs</strong> ist Live der Event Spezialist für
             Medienserver und interaktive Mediensteuerungen. Wir setzen verrückte
             Ideen um, bauen Steuerungen oder sind als Operator tätig. Wir sind
             kreative Techniker und technisch versierte Kreative.

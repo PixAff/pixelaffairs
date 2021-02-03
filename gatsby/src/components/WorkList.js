@@ -36,10 +36,10 @@ const WorkStyles = styled.div`
   background: white;
   display: grid;
   grid-template-rows: auto auto auto minmax(12rem, 1fr) auto;
+  gap: 1rem;
   .gatsby-image-wrapper {
     height: 240px;
   }
-  gap: 1rem;
   h2,
   p {
     margin: 0;
@@ -48,16 +48,20 @@ const WorkStyles = styled.div`
     padding: 0;
     margin: 0;
   }
-    }
+  div {
+    position: relative;
+  }
   h4 {
     padding-left: 5%;
     padding-right: 5%;
+    bottom: 10px;
+    right: 10px;
     width: intrinsic;
     width: max-content;
     text-align: center;
     font-size: 2rem;
-    transform: translate(0, -40px) rotate(0deg);
-    position: relative;
+    transform: translate(0, 0) rotate(0deg);
+    position: absolute;
     color: black;
     background: var(--yellow);
     z-index: 2;

@@ -44,6 +44,25 @@ const NavStyles = styled.nav`
     &:hover {
       color: var(--red);
     }
+    @media (max-width: 600px) {
+      font-size: 1.8rem;
+    }
+  }
+  @media (max-width: 800px) {
+    --nav: 100px;
+    --columns: 4;
+    ul {
+      grid-template-rows: auto auto;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      justify-items: center;
+    }
+    .logo-item {
+      order: 0;
+      grid-column: 1 / -1;
+    }
+  }
+  @media (max-width: 600px) {
+    --columns: 4;
   }
 `;
 
@@ -57,7 +76,7 @@ export default function Nav() {
         <li>
           <Link to="/work">work</Link>
         </li>
-        <li>
+        <li className="logo-item">
           <Link to="/">
             <Logo />
           </Link>
