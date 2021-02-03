@@ -26,6 +26,14 @@ export default {
       },
     },
     {
+      name: "imageBgIdx",
+      title: "index Background",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: "imageAbout",
       title: "about Image",
       type: "image",
