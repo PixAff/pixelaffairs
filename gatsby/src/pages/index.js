@@ -9,7 +9,7 @@ import Example from "../components/indexPage/Example";
 import Tech from "../components/indexPage/Tech";
 // import useLatestData from "../utils/useLatestData";
 
-import pixAffIndexBg from "../assets/images/index-bg-car.webp";
+// import pixAffIndexBg from "../assets/images/index-bg-car.jpeg";
 
 const PageStyles = styled.div`
   font-size: 2rem;
@@ -22,20 +22,21 @@ const IndexStyles = styled.div`
   transition: all 0.4s;
   min-height: 100vh;
   width: 100%;
-  background-repeat: no-repeat;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  background: var(--yellow) url(${pixAffIndexBg});
 `;
 
+// background: var(--yellow) url(${pixAffIndexBg});
 export default function HomePage({ data }) {
   // const result = useLatestData();
   return (
     <div>
       <SEO title="home" />
       <PageStyles>
-        <IndexStyles></IndexStyles>
+        <IndexStyles
+          style={{ background: "url('/index-bg-car.jpeg')" }}
+        ></IndexStyles>
         <AnimatedLogo />
         <Introduction fluid={data.idx.imageIdx.asset.fluid} />
         <Example />
