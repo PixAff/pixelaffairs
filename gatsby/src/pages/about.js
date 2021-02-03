@@ -12,6 +12,10 @@ const AboutStyles = styled.div`
   gap: 4rem;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   place-items: center;
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 `;
 
 export default function AboutPage() {

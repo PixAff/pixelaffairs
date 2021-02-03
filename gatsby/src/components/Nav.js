@@ -52,6 +52,7 @@ const NavStyles = styled.nav`
     --nav: 100px;
     --columns: 4;
     ul {
+      row-gap: 1rem;
       grid-template-rows: auto auto;
       grid-template-columns: repeat(var(--columns), 1fr);
       justify-items: center;

@@ -16,6 +16,9 @@ const ContactStyles = styled.div`
   button {
     margin-bottom: 4rem;
   }
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 `;
 
 export default function ContactPage() {
